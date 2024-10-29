@@ -40,14 +40,42 @@ def main():
   st.sidebar.markdown("[Aadhyathmik Varahagiri](%s)" % lnkd_profile_url)  
 
 
+
+
+
+
+
   st.sidebar.title("Welcome")
   st.sidebar.text(" ")
   st.sidebar.text(" ")
   st.sidebar.header("This is a free community version of Grader Bot AI")
   st.sidebar.text(" ")
   st.sidebar.text(" ")
+
+
+  options = ["gpt-4o", "gpt-4o-mini", "gpt-4", "gpt-3.5-turbo"]
+
+  # Single selection input
+  model_input = st.sidebar.selectbox("Choose an option:", options, index=0)
+
+  # Display the selected option
+  #st.sidebar.write("You selected:", model_input)
+
+  
+
+
+
+  add_space(2)
+
+
+
   user_input = st.sidebar.text_input("OpenAI API Key", value = "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")
-  add_space(10)
+  #st.sidebar.write("Current input value:", user_input)
+
+  
+
+
+  add_space(5)
 
   # Get OpenAI API key
   openai_api_key = user_input
@@ -82,6 +110,7 @@ def main():
   uploaded_syllabus = st.file_uploader("Upload syllabus", type=("txt", "md", "pdf"))
   uploaded_rubric = st.file_uploader("Upload rubric", type=("txt", "md", "pdf"))
   uploaded_papers = st.file_uploader("Upload papers", type=("txt", "md", "pdf"), accept_multiple_files=False)
+  submit_button = st.button("Submit")
   #question = st.text_input(
   #    "Ask something about the article(s)",
   #    placeholder="Can you give me a short summary?",
@@ -94,9 +123,10 @@ def main():
       and uploaded_papers
       #and question
       and not openai_api_key
+      and submit_button
   ):
       st.info("1 or more inputs are missing. Please provide the missing input(s) to continue.")
-  elif uploaded_syllabus and uploaded_rubric and uploaded_papers and openai_api_key:
+  elif uploaded_syllabus and uploaded_rubric and uploaded_papers and openai_api_key and submit_button:
       
       # Process files
       syllabus_text = get_text_from_file(uploaded_syllabus)
@@ -119,7 +149,7 @@ You are an AI grading assistant tasked with evaluating a student's paper based o
 **Rubric:**  
 {rubric_text}
 
-Using the syllabus and rubric, assess the paper.
+Using the syllabus and rubric, assess the paper {paper_text}.
 
 Provide feedback and a grade that reflects the rubrics scoring categories. Offer constructive comments where improvements are needed, and highlight strengths where applicable.
 """
@@ -128,7 +158,7 @@ Provide feedback and a grade that reflects the rubrics scoring categories. Offer
         # Model
       client = openai.Client(api_key=openai_api_key)
       response = client.chat.completions.create(
-          model="gpt-4o",
+          model= model_input,
           messages=[
               {"role": "user", "content": sys_prompt},
               {"role": "system", "content": "Grade the answers using syllabus, rubric and uploaded response"},
