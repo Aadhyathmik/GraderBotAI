@@ -46,7 +46,7 @@ def main():
   st.sidebar.header("This is a free community version of Grader Bot AI")
   st.sidebar.text(" ")
   st.sidebar.text(" ")
-  user_input = st.sidebar.text_input("OpenAI API Key")
+  user_input = st.sidebar.text_input("OpenAI API Key", value = "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")
   add_space(10)
 
   # Get OpenAI API key
@@ -108,14 +108,29 @@ def main():
       all_responses = []
         
         # Given prompt
-      prompt = f"""Here's a syllabus:\n\n{syllabus_text}\n\nHere's a rubric:\n\n{rubric_text}\n\nHere's a paper:\n\n{paper_text}"""
+      #prompt = f"""Here's a syllabus:\n\n{syllabus_text}\n\nHere's a rubric:\n\n{rubric_text}\n\nHere's a paper:\n\n{paper_text}"""
+
+      sys_prompt = f"""
+You are an AI grading assistant tasked with evaluating a student's paper based on specific course expectations and grading criteria. Below are the course syllabus and grading rubric provided by the instructor:
+
+**Syllabus:**  
+{syllabus_text}
+
+**Rubric:**  
+{rubric_text}
+
+Using the syllabus and rubric, assess the paper.
+
+Provide feedback and a grade that reflects the rubrics scoring categories. Offer constructive comments where improvements are needed, and highlight strengths where applicable.
+"""
+
 
         # Model
       client = openai.Client(api_key=openai_api_key)
       response = client.chat.completions.create(
-          model="gpt-3.5-turbo",
+          model="gpt-4o",
           messages=[
-              {"role": "user", "content": prompt},
+              {"role": "user", "content": sys_prompt},
               {"role": "system", "content": "Grade the answers using syllabus, rubric and uploaded response"},
           ],
           temperature=1,
