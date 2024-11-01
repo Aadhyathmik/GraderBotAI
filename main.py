@@ -124,7 +124,7 @@ def main():
       and uploaded_rubric
       and uploaded_papers
       #and question
-      and not openai_api_key
+      and openai_api_key
       and submit_button
   ):
       st.info("1 or more inputs are missing. Please provide the missing input(s) to continue.")
