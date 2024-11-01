@@ -51,9 +51,9 @@ def main():
   st.sidebar.header("This is a free community version of Grader Bot AI")
   st.sidebar.text(" ")
   st.sidebar.text(" ")
-  st.sidebar.text("Use This: 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")
-  st.sidebar.text(" ")
-  st.sidebar.text(" ")
+ ### st.sidebar.text("Use This: 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")
+  #st.sidebar.text(" ")
+  #st.sidebar.text(" ")
 
   options = ["gpt-4o", "gpt-4o-mini", "gpt-4", "gpt-3.5-turbo"]
 
@@ -69,7 +69,7 @@ def main():
 
   add_space(2)
 
-  user_input = st.sidebar.text_input("OpenAI API Reference", value = "")
+  user_input = st.sidebar.text_input("OpenAI API Reference", value = "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")
   #st.sidebar.write("Current input value:", user_input)
 
   
