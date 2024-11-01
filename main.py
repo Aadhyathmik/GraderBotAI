@@ -66,7 +66,7 @@ def main():
   
   secret_key = st.secrets["openapi"]["openapi_key"]
 
-  
+  st.write(secret_key)
 
 
   add_space(2)
@@ -124,7 +124,7 @@ def main():
       and uploaded_rubric
       and uploaded_papers
       #and question
-      and openai_api_key
+      and not openai_api_key
       and submit_button
   ):
       st.info("1 or more inputs are missing. Please provide the missing input(s) to continue.")
