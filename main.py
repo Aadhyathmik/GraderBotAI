@@ -41,7 +41,7 @@ def main():
 
 
 
-#what change shall be made? again?
+#what change shall be made?
 
 
 
@@ -69,7 +69,7 @@ def main():
 
 
 
-  user_input = st.sidebar.text_input("OpenAI API Key", value = "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")
+  user_input = st.sidebar.text_input("OpenAI API Reference", value = "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")
   #st.sidebar.write("Current input value:", user_input)
 
   
