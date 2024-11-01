@@ -2,6 +2,10 @@ import streamlit as st
 import openai
 import PyPDF2
 
+def add_space(n=1):
+  for _ in range(n):
+    st.sidebar.text(" ")
+
     # Recognizes if the file is pdf or txt
 def get_text_from_file(uploaded_file):
   if uploaded_file.type == "application/pdf":
@@ -22,9 +26,7 @@ def pdf_to_text(pdf_file):
 
   return text
 
-def add_space(n=1):
-  for _ in range(n):
-    st.sidebar.text(" ")
+
 
 def main():
   """
