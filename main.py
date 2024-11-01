@@ -66,7 +66,6 @@ def main():
   
   secret_key = st.secrets["openapi"]["openapi_key"]
 
-  st.write(secret_key)
 
 
   add_space(2)
