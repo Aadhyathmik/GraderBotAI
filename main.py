@@ -114,9 +114,19 @@ def main():
   st.title("Assignment Evaluation and Feedback")
   st.divider()
 
+  st.markdown("""
+<style>
+.big-font {
+    font-size:300px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
   st.text(" ")
-  st.text(" ")
-  st.markdown("[Demo Files to test](%s)" % samplefiles)  
+  #st.markdown("[Demo Files to test](%s)" % samplefiles)  
+  st.markdown('<p class="big-font">"[Demo Files to test](%s)" % samplefiles</p>', unsafe_allow_html=True)
+
+  st.divider()
 
   # Upload files (Syllabus, Rubric, Papers)
   uploaded_syllabus = st.file_uploader("Upload syllabus (Drop a pdf or txt file)", type=("txt", "md", "pdf"))
