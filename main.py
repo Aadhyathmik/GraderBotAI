@@ -93,6 +93,7 @@ def main():
   tos="https://graderbotai.com/terms-and-conditions/"
   pp="https://graderbotai.com/privacy-policy/"
   gvsc="https://graderbotai.com/graderbot-vs-chatgpt/"
+  samplefiles="https://github.com/Aadhyathmik/GraderBotAI/tree/main/SampleFiles"
   st.sidebar.text(" ")
   st.sidebar.text(" ")
   st.sidebar.markdown("[Terms of Service](%s)" % tos)  
@@ -111,7 +112,11 @@ def main():
 
   st.divider()
   st.title("Assignment Evaluation and Feedback")
+  st.divider()
 
+  st.text(" ")
+  st.text(" ")
+  st.markdown("[Demo Files to test](%s)" % samplefiles)  
 
   # Upload files (Syllabus, Rubric, Papers)
   uploaded_syllabus = st.file_uploader("Upload syllabus (Drop a pdf or txt file)", type=("txt", "md", "pdf"))
