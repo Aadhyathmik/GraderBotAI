@@ -72,7 +72,7 @@ def main():
 
   add_space(2)
 
-  user_input = st.sidebar.text_input("OpenAI API Reference", value = secret_key)
+  user_input = st.sidebar.text_input("OpenAI API Key", value = secret_key)
   #st.sidebar.write("Current input value:", user_input)
 
   
