@@ -1,0 +1,25 @@
+
+Sample Student Responses: Newton's Laws of Motion
+
+There are 3 sample student responses
+
+---
+
+**Response 1 - High Quality**
+
+Newton's three laws of motion provide a clear framework to understand how forces affect objects. According to the first law, an object will remain at rest or move at a constant velocity unless an unbalanced force acts on it. This law, also known as the law of inertia, is illustrated in everyday life; for instance, a book on a table will not move until a force is applied to it. The second law, represented by F = ma, explains that the acceleration of an object is proportional to the force applied and inversely proportional to its mass. This is why a small object, like a baseball, accelerates faster when a force is applied compared to a heavier object, like a bowling ball. Lastly, Newton’s third law states that for every action, there is an equal and opposite reaction. This can be seen in rocket launches, where the force of gas pushing out propels the rocket upwards. These laws are fundamental to mechanics and are vital in fields like engineering and physics, helping us to understand and predict the motion of objects in various scenarios.
+
+---
+
+**Response 2 - Average Quality**
+
+Newton's laws explain how things move. The first law says that things keep moving unless a force stops them. An example of this would be a ball that will keep rolling until friction slows it down. The second law says that force causes acceleration, which depends on how heavy something is. So if you push a small object, it moves faster than a big one if you use the same force. The third law states that for every action, there is a reaction. A good example of this law is when we push against a wall, and we feel a pushback. These laws are important because they help us understand motion.
+
+---
+
+**Response 3 - Low Quality**
+
+Newton's laws talk about how things move and forces. First, objects stay still unless pushed. This is called inertia. Second, when you push harder, things go faster. Third, when you push something, it pushes back. Like when you jump, the ground pushes back. Newton’s laws are used in science to study motion.
+
+---
+
