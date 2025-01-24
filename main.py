@@ -36,7 +36,7 @@ def main():
 
 # Title
 
-  st.sidebar.image("Gbot.jpg", use_column_width=True)
+  st.sidebar.image("Gbot.jpg", use_container_width=True)
   st.sidebar.divider()
   lnkd_profile_url="https://www.linkedin.com/in/aadhyathmik/"
   st.sidebar.markdown("[Aadhyathmik Varahagiri](%s)" % lnkd_profile_url)  
@@ -101,7 +101,7 @@ def main():
   
 
   image_file="Gbot.jpg"
-  st.image(image_file, use_column_width=True)
+  st.image(image_file, use_container_width=True)
   link_url="https://graderbotai.com/"
   
 
