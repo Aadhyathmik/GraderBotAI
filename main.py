@@ -92,13 +92,16 @@ def main():
 
   tos="https://graderbotai.com/terms-and-conditions/"
   pp="https://graderbotai.com/privacy-policy/"
+  gvsc="https://graderbotai.com/graderbot-vs-chatgpt/"
   st.sidebar.text(" ")
   st.sidebar.text(" ")
   st.sidebar.markdown("[Terms of Service](%s)" % tos)  
   st.sidebar.text(" ")
   st.sidebar.text(" ")
   st.sidebar.markdown("[Privacy Policy](%s)" % pp)  
-  
+  st.sidebar.text(" ")
+  st.sidebar.text(" ")
+  st.sidebar.markdown("[GraderBot vs ChatGPT](%s)" % gvsc)  
 
   image_file="Gbot.jpg"
   st.image(image_file, use_container_width=True)
@@ -108,6 +111,7 @@ def main():
 
   st.divider()
   st.title("Assignment Evaluation and Feedback")
+
 
   # Upload files (Syllabus, Rubric, Papers)
   uploaded_syllabus = st.file_uploader("Upload syllabus (Drop a pdf or txt file)", type=("txt", "md", "pdf"))
