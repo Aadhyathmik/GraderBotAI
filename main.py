@@ -112,9 +112,7 @@ def main():
 
   st.divider()
   st.title("Assignment Evaluation and Feedback")
-  st.divider()
 
-  st.text(" ")
   st.markdown("# [Demo Files to test](%s)" % samplefiles)  
   
 
