@@ -114,17 +114,9 @@ def main():
   st.title("Assignment Evaluation and Feedback")
   st.divider()
 
-  st.markdown("""
-<style>
-.big-font {
-    font-size:300px !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
   st.text(" ")
-  #st.markdown("[Demo Files to test](%s)" % samplefiles)  
-  st.markdown('<p class="big-font">"[Demo Files to test](%s)" % samplefiles</p>', unsafe_allow_html=True)
+  st.markdown("# [Demo Files to test](%s)" % samplefiles)  
+  
 
   st.divider()
 
