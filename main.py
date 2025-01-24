@@ -110,9 +110,9 @@ def main():
   st.title("Assignment Evaluation and Feedback")
 
   # Upload files (Syllabus, Rubric, Papers)
-  uploaded_syllabus = st.file_uploader("Upload syllabus", type=("txt", "md", "pdf"))
-  uploaded_rubric = st.file_uploader("Upload rubric", type=("txt", "md", "pdf"))
-  uploaded_papers = st.file_uploader("Upload papers", type=("txt", "md", "pdf"), accept_multiple_files=False)
+  uploaded_syllabus = st.file_uploader("Upload syllabus (Drop a pdf or txt file)", type=("txt", "md", "pdf"))
+  uploaded_rubric = st.file_uploader("Upload rubric (Drop a pdf or txt file)", type=("txt", "md", "pdf"))
+  uploaded_papers = st.file_uploader("Upload papers (Drop a pdf or txt file)", type=("txt", "md", "pdf"), accept_multiple_files=False)
   submit_button = st.button("Submit")
   #question = st.text_input(
   #    "Ask something about the article(s)",
